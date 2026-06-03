@@ -39,7 +39,7 @@ jobs:
             version: '9.15.5'
 
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - id: pnpm
         name: Run the action
@@ -122,7 +122,7 @@ jobs:
             expect_pm_on_fail_unset: true
 
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Set up package.json
         run: echo '${{ matrix.manifest }}' > package.json
@@ -171,7 +171,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Run the action
         uses: ./
@@ -208,7 +208,7 @@ jobs:
     name: 'Standalone Windows self-update (PATH regression)'
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Set up package.json with a minimal manifest
         # run_install needs a manifest to install against. Removing the
@@ -266,7 +266,7 @@ jobs:
             manifest: '{"devEngines":{"packageManager":{"name":"pnpm","version":">=10 <11"}},"dependencies":{"is-odd":"3.0.1"}}'
 
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Set up package.json
         run: echo '${{ matrix.manifest }}' > package.json
@@ -310,7 +310,7 @@ jobs:
                 - yarn
 
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Run the action
         uses: ./
